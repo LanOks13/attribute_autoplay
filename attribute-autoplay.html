@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Атрибут autoplay</title>
+    <style>
+      p {
+        font-size: 1em;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .flex .two {
+        background-color: rgb(83, 107, 244);
+        margin: 15px;
+        padding: 7px;
+      }
+
+      .flex .three {
+        background-color: rgb(242, 231, 30);
+        margin: 15px;
+        padding: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ====== Відео перше з розшинення .mp4 ===== -->
+    <section class="one">
+      <p>Відео перше - із <em>розширенням</em> <strong>.mp4</strong></p>
+      <video width="400" height="200" controls autoplay>
+        <source
+          srs="http://techslides.com/demos/sample-videos/small.mp4"
+          type="video/mp4"
+        />
+        <p>Текст, який ми побачимо, якщо браузер не підтримує відео-тег.</p>
+      </video>
+    </section>
+
+    <!-- ===== Відео друге та третє з розширенням .webm ===== -->
+    <!-- ===== Третє відео має додатковий атрибут muted ===== -->
+    <div class="flex">
+      <section class="two">
+        <p>Відео друге - із <em>розширенням</em> <strong>.webm</strong></p>
+        <video width="300" height="150" controls autoplay>
+          <source
+            src="http://techslides.com/demos/sample-videos/small.webm"
+            type="video/webm"
+          />
+          <p>Текст, який ми побачимо, якщо браузер не підтримує відео-тег.</p>
+        </video>
+      </section>
+
+      <section class="three">
+        <p>
+          Відео третє - із розширеням <strong>.webm</strong> та
+          <em>атрибутом</em> <strong>muted</strong>
+        </p>
+        <video width="300" height="150" controls autoplay muted>
+          <source
+            src="http://techslides.com/demos/sample-videos/small.webm"
+            type="video/webm"
+          />
+          <p>Текст, який ми побачимо, якщо браузер не підтримує відео-тег.</p>
+        </video>
+      </section>
+    </div>
+
+    <!-- ===== Відео четверте з розшинення .ogg ===== -->
+
+    <section class="four">
+      <p>Відео четверте - із розширеням <strong>.ogg</strong></p>
+      <video width="400" height="200" controls autoplay>
+        <source
+          src="http://techslides.com/demos/sample-videos/small.ogg"
+          type="video/ogg"
+        />
+        <p>Текст, який ми побачимо, якщо браузер не підтримує відео-тег.</p>
+      </video>
+    </section>
+  </body>
+</html>
